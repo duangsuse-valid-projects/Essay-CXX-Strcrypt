@@ -8,6 +8,14 @@ C++ string constant (const char*) code protection using template/constexpr compi
 
 辣鸡可怜愚蠢的 duangsuse 花了足足一天的时间也要强行写完的 C++ 『代码字符串保护』实现。
 
+### 有用的代码
+
++ `*.pro` 是 QMake 的工程文件，里面指定了语言版本和头文件、实现代码什么的
++ `literal_str.hpp` 是静态字符串拼接的帮助程序
++ `mess.h` 是混淆的头文件
++ `main.cpp` 是测试
+
+
 ### 什么是 `constexpr`
 
 是 C++ 的编译期计算实现，它可以把编译期能够确定的东西拿来计算，产生的东西运行期编译期都可以用，比如可以 `static_assert`
@@ -51,13 +59,15 @@ int main() {
 
 加密方式非常简单，就是 naive 的凯撒密码（每个字符加一个偏移 _k_），也没有循环块加密和加盐什么的...
 
+> 以上是我玩一个个人的梗啦... 不要弄个大新闻说我要谦虚一点又把我给批判一番
+
 ## 向大佬致谢
 
 作者在完成这个项目的时候，得到了（世界互联）网上一些大佬发表文章的帮助（注意，都不是 StackOverflow 上的）
 
 在此特别予以感谢：
 
-+ [C++11 Compile-time String Concatenation with constexpr | DaniWeb](C++11 Compile-time String Concatenation ... | DaniWeb)
++ [C++11 Compile-time String Concatenation with constexpr | DaniWeb](https://www.daniweb.com/programming/software-development/code/482276/c-11-compile-time-string-concatenation-with-constexpr)
 + [USTC 隆晋威（Spring 2018）： C++17 实现类型安全的 printf ](https://lug.ustc.edu.cn/wiki/lug/events/weeklyparty)
 
 ## 许可证相关
